@@ -1,8 +1,0 @@
-{
-  "Sweater": { "Wool": 2 },
-  "Cotton Fabric": { "Cotton": 3 },
-  "Blue Woolly Hat": { "Indigo": 1, "Wool": 1 },
-  "Blue Sweater": { "Indigo": 2, "Wool": 2 },
-  "Red Scarf": { "Strawberry": 2, "Wool": 2 },
-  "Flower Shawl": { "Wool": 2, "Sunflower": 3, "Blackberry": 1 }
-}

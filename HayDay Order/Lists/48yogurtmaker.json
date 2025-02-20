@@ -1,6 +1,0 @@
-{
-    "Plain Yogurt": {"Milk": 3, "Cream": 2},
-    "Strawberry Yogurt": {"Plain Yogurt": 1, "Strawberry Jam": 1},
-    "Tropical Yogurt": {"Plain Yogurt": 1, "Raspberry": 4, "Passion Fruit": 1, "Mango": 2},
-    "Breakfast Bowl": {"Plain Yogurt": 1, "Oats": 4, "Honey": 1, "Blackberry": 2}
-}

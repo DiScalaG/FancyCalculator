@@ -1,7 +1,0 @@
-{
-  "Cotton Shirt": { "Cotton Fabric": 2 },
-  "Wooly Chaps": { "Cotton Fabric": 1, "Wool": 3 },
-  "Violet Dress": { "Cotton Fabric": 2, "Indigo": 1, "Raspberry": 1 },
-  "Pillow": { "Cotton Fabric": 2, "Duck Feather": 3 },
-  "Blanket": { "Cotton Fabric": 3, "Duck Feather": 5, "Pumpkin": 1 }
-}

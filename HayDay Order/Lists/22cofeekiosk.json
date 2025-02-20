@@ -1,9 +1,0 @@
-{
-    "Espresso": {"Coffee Bean": 3, "White Sugar": 1},
-    "Caffè Latte": {"Coffee Bean": 2, "Milk": 1, "White Sugar": 1},
-    "Caffè Mocha": {"Coffee Bean": 1, "Cream": 1, "Cacao": 2},
-    "Raspberry Mocha": {"Cacao": 1, "Coffee Bean": 1, "Cream": 1, "Raspberry": 1},
-    "Hot Chocolate": {"Cacao": 2, "Cream": 1, "Milk": 1, "White Sugar": 1},
-    "Caramel Latte": {"Coffee Bean": 2, "Toffee": 1, "Milk": 1},
-    "Iced Banana Latte": {"Banana": 1, "Coffee Bean": 2, "Milk": 1}
-}
