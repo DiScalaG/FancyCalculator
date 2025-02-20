@@ -1,0 +1,14 @@
+{
+  "Carrot Juice": { "Carrot": 3 },
+  "Apple Juice": { "Apple": 2 },
+  "Cherry Juice": { "Cherry": 2 },
+  "Tomato Juice": { "Tomato": 3 },
+  "Berry Juice": { "Blackberry": 1, "Raspberry": 1 },
+  "Pineapple Juice": { "Pineapple": 3 },
+  "Orange Juice": { "Orange": 2 },
+  "Grape Juice": { "Grapes": 2 },
+  "Passion Fruit Juice": { "Passion Fruit": 2 },
+  "Watermelon Juice": { "Watermelon": 2 },
+  "Mango Juice": { "Mango": 2 },
+  "Guava Juice": { "Guava": 2 }
+}

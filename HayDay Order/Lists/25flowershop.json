@@ -1,0 +1,9 @@
+{
+    "Rustic Bouquet": {"Wheat": 5, "Indigo": 3, "Cotton": 3},
+    "Bright Bouquet": {"Sunflower": 5, "Indigo": 3, "Cotton": 1, "Iron Ore": 5},
+    "Gracious Bouquet": {"Cotton Fabric": 1, "Lily": 5, "Gold ore": 1, "Diamond": 1},
+    "Candy Bouquet": {"Peony": 3, "Toffee": 1, "Caramel Apple": 1},
+    "Birthday Bouquet": {"Cherry Juice": 1, "Peony": 3, "Lily": 1, "Indigo": 1},
+    "Soft Bouquet": {"Peony": 4, "Cotton": 1, "Cotton Fabric": 1},
+    "Veggie Bouquet": {"Broccoli": 3, "Tomato": 3, "Mushroom": 3, "Cotton Fabric": 1}
+}

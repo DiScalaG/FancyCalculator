@@ -1,0 +1,6 @@
+{
+    "Plain Waffles": {"White Sugar": 2, "Egg": 3, "Wheat": 5},
+    "Berry Waffles": {"Plain waffles": 1, "Syrup": 1, "Raspberry": 3, "Blackberry": 2},
+    "Chocolate Waffles": {"Plain Waffles": 1, "Cacao": 2, "Strawberry": 3, "Banana": 1},
+    "Breakfast Waffles": {"Plain Waffles": 1, "Bacon": 2, "Egg": 1, "Asparagus": 2}
+}

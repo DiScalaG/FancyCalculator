@@ -1,0 +1,6 @@
+{
+    "Chocolate Fondue": {"Chocolate": 1, "Strawberry": 3},
+    "Bacon Fondue": {"Bacon": 3, "Broccoli": 1, "Bell Pepper": 1, "Olive Oil": 1},
+    "Cheese Fondue": {"Potato Bread": 1, "Cheese": 1, "Mushroom": 2, "Tomato": 1},
+    "Tropical Fondue": {"White Sugar": 1, "Cream": 2, "Pineapple": 3, "Mango": 2}
+}

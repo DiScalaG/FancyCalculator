@@ -1,0 +1,8 @@
+{
+  "Popcorn": { "Corn": 2 },
+  "Buttered Popcorn": { "Butter": 1, "Corn": 2 },
+  "Chili Popcorn": { "Chili Pepper": 2, "Corn": 2 },
+  "Honey Popcorn": { "Corn": 2, "Honey": 2 },
+  "Chocolate Popcorn": { "Cacao": 2, "Corn": 2 },
+  "Snack Mix": { "Corn": 2, "Sesame": 1, "Peanuts": 1 }
+}

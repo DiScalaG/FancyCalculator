@@ -1,0 +1,9 @@
+{
+  "Chicken Feed": { "Corn": 1, "Wheat": 2 },
+  "Cow Feed": { "Corn": 1, "Soybean": 2 },
+  "Pig Feed": { "Carrot": 2, "Soybean": 1 },
+  "Sheep Feed": { "Soybean": 1, "Wheat": 3 },
+  "Goat Feed": { "Carrot": 2, "Corn": 1, "Wheat": 1 },
+  "Wheat Bundle": { "Wheat": 75 },
+  "Meat Bucket": { "Fish Fillet": 3, "Carrot": 5 }
+}

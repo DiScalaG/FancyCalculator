@@ -1,0 +1,8 @@
+{
+  "Plain Donut": { "Milk": 1, "White Sugar": 1, "Egg": 1, "Wheat": 3 },
+  "Sprinkled Donut": { "Plain Donut": 1, "Cacao": 2 },
+  "Crunchy Donut": { "Plain Donut": 1, "Cacao": 1, "Peanuts": 1 },
+  "Cream Donut": { "Plain Donut": 1, "Cream": 1, "Brown Sugar": 1 },
+  "Bacon Donut": { "Plain Donut": 1, "Bacon": 3, "Syrup": 1 },
+  "Filled Donut": { "Plain Donut": 1, "Raspberry Jam": 1 }
+}

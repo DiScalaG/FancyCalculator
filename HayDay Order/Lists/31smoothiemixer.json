@@ -1,0 +1,11 @@
+{
+    "Berry Smoothie": {"Blackberry": 3, "Strawberry": 3, "Raspberry": 3},
+    "Green Smoothie": {"Apple": 1, "Lemon": 1, "Lettuce": 5},
+    "Yogurt Smoothie": {"Cherry": 1, "Cream": 1, "Raspberry": 2, "White Sugar": 1},
+    "Cucumber Smoothie": {"Cucumber": 3, "Honey": 1, "Pineapple": 3},
+    "Mixed Smoothie": {"Lemon": 1, "Orange": 2, "Peach": 2},
+    "Black Sesame Smoothie": {"Sesame": 3, "Banana": 1, "Goat Milk": 2},
+    "Cocoa Smoothie": {"Banana": 2, "Cacao": 3, "Milk": 1},
+    "Plum Smoothie": {"Plum": 3, "Grapes": 1, "Mint": 1, "Honey": 1},
+    "Tropical Smoothie": {"Coconut": 1, "Banana": 1, "Passion Fruit": 2, "Mango": 2}
+}

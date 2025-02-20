@@ -1,0 +1,11 @@
+{
+  "Green Tea": { "Tea Leaf": 5 },
+  "Milk Tea": { "Milk": 1, "Tea Leaf": 3 },
+  "Honey Tea": { "Honey": 1, "Tea Leaf": 3 },
+  "Lemon Tea": { "Lemon": 1, "Tea Leaf": 3 },
+  "Apple Ginger Tea": { "Ginger": 1, "Apple": 2, "Tea Leaf": 1 },
+  "Orange Tea": { "Orange": 1, "Tea Leaf": 3 },
+  "Iced Tea": { "Peach": 1, "Tea Leaf": 3 },
+  "Mint Tea": { "Tea Leaf": 3, "Mint": 1, "Watermelon": 1 },
+  "Pomegranate Tea": { "Pomegranate": 1, "Tea Leaf": 4 }
+}

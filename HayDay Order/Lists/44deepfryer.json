@@ -1,0 +1,8 @@
+{
+    "Bacon Fries": {"Chili Pepper": 1, "Bacon": 2, "Potato": 4, "Garlic": 1},
+    "Hand Pies": {"Apple Jam": 1, "Egg": 2, "Wheat": 5},
+    "Chili Poppers": {"Chili Pepper": 3, "Wheat": 1, "Bacon": 3, "Cheese": 1},
+    "Falafel": {"Chili Pepper": 1, "Chickpea": 3, "Onion": 2, "Garlic": 2},
+    "Fried Candy Bar": {"Cacao": 3, "Cookie": 1, "Peanuts": 1},
+    "Samosa": {"Chickpea": 2, "Wheat": 4, "Chili Pepper": 1, "Potato": 3}
+}

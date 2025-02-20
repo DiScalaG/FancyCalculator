@@ -1,0 +1,5 @@
+{
+  "Tea Pot": { "Clay": 3, "Coffee Bean": 1, "Gold Ore": 1 },
+  "Potted Plant": { "Clay": 3, "Sunflower": 1 },
+  "Clay Mug": { "Clay": 3, "Indigo": 2, "Peony": 1 }
+}

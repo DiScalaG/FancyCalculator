@@ -1,0 +1,7 @@
+{
+  "Bracelet": { "Gold Bar": 1, "Silver Bar": 2 },
+  "Necklace": { "Gold Bar": 1, "Platinum Bar": 1, "Silver Bar": 2 },
+  "Diamond Ring": { "Diamond": 1, "Gold Bar": 2, "Platinum Bar": 2 },
+  "Iron Bracelet": { "Iron Bar": 2, "Refined Coal": 2, "Silver Bar": 1 },
+  "Flower Pendant": { "Peony": 3, "Platinum Bar": 1, "Gold Bar": 2 }
+}

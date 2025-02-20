@@ -1,0 +1,14 @@
+{
+    "Lobster Soup": {"Chili Pepper": 2, "Cream": 1, "Lobster Tail": 2, "Tomato": 1},
+    "Tomato Soup": {"Chili Pepper": 1, "Goat Cheese": 1, "Tomato Juice": 1, "Tomato": 2},
+    "Pumpkin Soup": {"Butter": 1, "Carrot": 2, "Honey": 1, "Pumpkin": 3},
+    "Asparagus Soup": {"Asparagus": 3, "Cream": 2},
+    "Fish Soup": {"Carrot": 1, "Fish fillet": 2, "Milk": 1, "Potato": 3},
+    "Cabbage Soup": {"Cabbage": 3, "Bacon": 2, "Potato": 2, "Carrot": 2},
+    "Onion Soup": {"Bread": 2, "Cheese": 1, "Onion": 3},
+    "Noodle Soup": {"Carrot": 2, "Chili Pepper": 1, "Egg": 2, "Rice Noodles": 3},
+    "Potato Soup": {"Milk": 1, "Onion": 2, "Potato": 3},
+    "Bell Pepper Soup": {"Bread": 1, "Olive Oil": 1, "Chili Pepper": 1, "Bell Pepper": 2},
+    "Broccoli Soup": {"Broccoli": 3, "Onion": 1, "Potato": 3},
+    "Mushroom Soup": {"Mushroom": 3, "Milk": 1, "Onion": 2}
+}

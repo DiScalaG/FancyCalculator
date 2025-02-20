@@ -1,0 +1,12 @@
+{
+  "Apple Jam": { "Apple": 3 },
+  "Raspberry Jam": { "Raspberry": 3 },
+  "Blackberry Jam": { "Blackberry": 3 },
+  "Cherry Jam": { "Cherry": 3 },
+  "Strawberry Jam": { "Strawberry": 3 },
+  "Marmalade": { "Orange": 3 },
+  "Peach Jam": { "Peach": 3 },
+  "Grape Jam": { "Grapes": 3 },
+  "Plum Jam": { "Plum": 3 },
+  "Passion Fruit Jam": { "Passion fruit": 3 }
+}

@@ -1,0 +1,18 @@
+{
+  "Pancake": { "Brown Sugar": 1, "Egg": 3 },
+  "Bacon and Eggs": { "Bacon": 2, "Egg": 4 },
+  "Hamburger": { "Bacon": 2, "Bread": 2 },
+  "Fish Burger": { "Bread": 2, "Chili Pepper": 1, "Fish Fillet": 2 },
+  "Roasted Tomatoes": { "Tomato": 2 },
+  "Baked Potato": { "Cheese": 1, "Chili Pepper": 1, "Cream": 1, "Potato": 2 },
+  "Fish and Chips": { "Fish Fillet": 2, "Potato": 3 },
+  "Lobster Skewer": { "Chili Pepper": 1, "Honey": 1, "Lobster Tail": 1 },
+  "Garlic Bread": { "Bread": 2, "Butter": 1, "Garlic": 4 },
+  "Grilled Asparagus": { "Asparagus": 5, "Bacon": 3, "Lemon": 1 },
+  "Grilled Onion": { "Butter": 1, "Onion": 2 },
+  "Winter Veggies": { "Beetroot": 2, "Carrot": 3, "Potato": 2, "Pumpkin": 2 },
+  "Stuffed Peppers": { "Bell Pepper": 3, "Bacon": 1, "Rice": 3, "Cheese": 1 },
+  "Grilled Eggplant": { "Eggplant": 3, "Salsa": 1 },
+  "Banana Pancakes": { "Banana": 1, "Blackberry": 2, "Cream": 1, "Wheat": 3 },
+  "Fish Skewer": { "Fish Fillet": 1, "Mushroom": 3, "Ginger": 1, "Sesame": 2 }
+}

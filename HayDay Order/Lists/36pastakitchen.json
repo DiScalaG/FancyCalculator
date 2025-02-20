@@ -1,0 +1,9 @@
+{
+    "Gnocchi": {"Potato": 4, "Tomato": 3, "Wheat": 2, "Butter": 2},
+    "Veggie Lasagna": {"Tomato Sauce": 1, "Fresh Pasta": 3, "Carrot": 1, "Cheese": 1},
+    "Lobster Pasta": {"Lobster Tail": 1, "Cream": 2, "Fresh Pasta": 3, "Tomato": 4},
+    "Pasta Carbonara": {"Fresh Pasta": 3, "Bacon": 2, "Egg": 1, "Cheese": 1},
+    "Broccoli Pasta": {"Broccoli": 3, "Cheese": 1, "Fresh Pasta": 3},
+    "Spicy Pasta": {"Fresh Pasta": 3, "Tomato Sauce": 1, "Chili Pepper": 3, "Onion": 2},
+    "Mushroom Pasta": {"Mushroom": 5, "Fresh Pasta": 3, "Goat Milk": 1}
+}

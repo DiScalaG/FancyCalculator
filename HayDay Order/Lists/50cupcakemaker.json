@@ -1,0 +1,6 @@
+{
+  "Plain Cupcake": { "Milk": 2, "White Sugar": 3, "Egg": 1, "Wheat": 5 },
+  "Guava Cupcake": { "Plain Cupcake": 1, "Guava": 2, "Cream": 1 },
+  "Tropical Cupcake": { "Plain Cupcake": 1, "Pineapple": 3, "Coconut": 2 },
+  "Cookie Cupcake": { "Plain Cupcake": 1, "Cream": 2, "Cookie": 2, "Cacao": 1 }
+}
