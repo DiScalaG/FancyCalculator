@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Fancy Cake Ingredient Calculator</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="top-nav">
+    <div class="nav-left">
+        <a href="#" class="nav-title">Fancy Calculator</a>
+    </div>
+    <div class="nav-right">
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Log in</a>
+    </div>
+</nav>
+
+<div class="product-selection-container">  <h2>Añadir Productos</h2>
+    <div class="dropdown">
+        <input type="text" id="productSearch" placeholder="Buscar producto..." oninput="filterDropdown()" autocomplete="off">
+        <div class="dropdown-list" id="productDropdownList">
+            </div>
+    </div>
+</div> <div class="requested-products-container"> <h2>Productos Solicitados</h2>
+    <div id="requestedProductsList">
+        <p>Tu lista está vacía. Usa el buscador de arriba para añadir productos.</p>
+    </div>
+</div> <button onclick="calculateIngredientsFromDynamicList()">Calcular Ingredientes</button>
+
+<div id="output"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
