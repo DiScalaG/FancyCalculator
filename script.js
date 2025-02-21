@@ -8,6 +8,7 @@ const animalFeeds = [
 ];
 let requestedProducts = {};
 let availableProductsList = [];
+let ocultarCompletadosActivo = false; // Variable de estado para ocultar/mostrar completados, inicializada a false (mostrar)
 
 async function loadCraftingData() {
   try {
@@ -83,6 +84,10 @@ function updateRequestedProductDisplay() {
     const productNameSpan = document.createElement("span");
     productNameSpan.textContent = `${quantity} ${productName} `;
 
+    // Contenedor para los botones +/-
+    const quantityButtons = document.createElement("div");
+    quantityButtons.classList.add("quantity-buttons");
+
     const decreaseButton = document.createElement("button");
     decreaseButton.textContent = "-";
     decreaseButton.addEventListener("click", () =>
@@ -95,9 +100,11 @@ function updateRequestedProductDisplay() {
       changeQuantity(productName, 1)
     );
 
+    quantityButtons.appendChild(decreaseButton);
+    quantityButtons.appendChild(increaseButton);
+
     listItem.appendChild(productNameSpan);
-    listItem.appendChild(decreaseButton);
-    listItem.appendChild(increaseButton);
+    listItem.appendChild(quantityButtons); // Añade el contenedor de botones al listItem
     requestedListDiv.appendChild(listItem);
   }
 }
@@ -183,19 +190,107 @@ function formatIngredients(ingredients, stepTitle = "Step") {
 
 function displaySteps(steps) {
   let outputHTML = "";
-  // Invierte el array de pasos aquí
   const reversedSteps = steps.reverse();
+
+  outputHTML += `<div id="output-header">`; // Nuevo contenedor para el encabezado (botón)
+  outputHTML += `   <div id="toggleCompletedSteps-container">`; // Contenedor para el botón "Ocultar Completados"
+  outputHTML += `       <button id="toggleCompletedSteps">Ocultar Completados</button>`; // Botón "Ocultar Completados"
+  outputHTML += `   </div>`; // Cierre del contenedor del botón
+  outputHTML += `</div>`; // Cierre del contenedor del encabezado
+
+  outputHTML += `<div id="steps-container">`; // Contenedor para los pasos
 
   for (let i = 0; i < reversedSteps.length; i++) {
     const step = reversedSteps[i];
-    // Actualiza el título del paso para que refleje el orden inverso
     const stepNumber = i + 1;
-    outputHTML += `<div class="step">
-                         <div class="step-title">Paso ${stepNumber}</div>
-                         <pre>${step.ingredients}</pre>
-                       </div>`;
+    outputHTML += `<div class="step" id="step-${stepNumber}">
+                       <div class="step-title">Paso ${stepNumber}</div>
+                       <ul class="ingredients-list">`; // Cambiado a ul para mejor estructura
+
+    const ingredientsArray = step.ingredients.trim().split("\n"); // Divide ingredientes en líneas
+
+    ingredientsArray.forEach((ingredientLine) => {
+      if (ingredientLine) {
+        // Asegura que la línea no esté vacía
+        const parts = ingredientLine.split("\t"); // Asume que la cantidad y el nombre están separados por tabulación
+        const quantityNeeded = parseInt(parts[0]); // Extrae cantidad necesaria
+        const ingredientName = parts[1]; // Extrae nombre del ingrediente
+
+        if (ingredientName) {
+          // Asegura que haya un nombre de ingrediente
+          outputHTML += `<li class="ingredient-item" data-ingredient="${ingredientName}" data-quantity-needed="${quantityNeeded}">
+                                   <span class="ingredient-name">${quantityNeeded} ${ingredientName}</span>
+                                   <input type="number" class="quantity-input" placeholder="0" min="0" max="${quantityNeeded}">
+                                 </li>`;
+        }
+      }
+    });
+
+    outputHTML += `</ul></div>`; // Cierre de ul e ingredient-list
   }
+  outputHTML += `</div>`; // Cierre del contenedor de pasos
+
   document.getElementById("output").innerHTML = outputHTML;
+
+  // Event listener para el botón "Ocultar Completados" DESPUÉS de que se ha añadido al DOM
+  document
+    .getElementById("toggleCompletedSteps")
+    .addEventListener("click", toggleCompletedSteps);
+
+  // Event listeners para los campos de entrada DESPUÉS de que se han añadido al DOM
+  const inputFields = document.querySelectorAll(".quantity-input");
+  inputFields.forEach((input) => {
+    input.addEventListener("change", handleQuantityInput);
+  });
+  aplicarEstadoOcultarCompletados();
+}
+
+function toggleCompletedSteps() {
+  ocultarCompletadosActivo = !ocultarCompletadosActivo; // Cambia el estado global
+
+  aplicarEstadoOcultarCompletados(); // Aplica el estado actual
+}
+
+function aplicarEstadoOcultarCompletados() {
+  const ingredientesCompletados = document.querySelectorAll(
+    ".ingredient-item.completed"
+  );
+  const button = document.getElementById("toggleCompletedSteps");
+
+  if (ocultarCompletadosActivo) {
+    // Si ocultarCompletadosActivo es true, Ocultar completados
+    button.textContent = "Mostrar Completados"; // Actualiza el texto del botón para reflejar la acción de "mostrar"
+    ingredientesCompletados.forEach((item) => {
+      item.classList.add("hidden");
+    });
+  } else {
+    // Si ocultarCompletadosActivo es false, Mostrar completados
+    button.textContent = "Ocultar Completados"; // Actualiza el texto del botón para reflejar la acción de "ocultar"
+    ingredientesCompletados.forEach((item) => {
+      item.classList.remove("hidden");
+    });
+  }
+}
+
+function handleQuantityInput(event) {
+  const inputField = event.target;
+  const enteredQuantity = parseInt(inputField.value);
+  const ingredientItem = inputField.closest(".ingredient-item"); // Encuentra el <li> padre
+  const quantityNeeded = parseInt(ingredientItem.dataset.quantityNeeded); // Obtiene la cantidad necesaria del data-attribute
+
+  if (enteredQuantity === quantityNeeded) {
+    ingredientItem.classList.add("completed"); // Marca el ingrediente como completado
+    if (ocultarCompletadosActivo) {
+      //  <--  Verifica si "ocultar completados" está activo
+      ingredientItem.classList.add("hidden"); //  <--  Oculta el nuevo ingrediente completado si está activo
+    }
+    // ELIMINADA la línea inputField.disabled = true; // Deshabilita el campo de entrada
+  } else if (enteredQuantity > quantityNeeded) {
+    inputField.value = quantityNeeded; // Corrige si se introduce un valor mayor al máximo
+  } else {
+    ingredientItem.classList.remove("completed"); // Desmarca si se corrige la cantidad
+    // ELIMINADA la línea inputField.disabled = false; // Habilita el campo de entrada nuevamente (innecesario ahora)
+  }
 }
 
 document.addEventListener("DOMContentLoaded", initializeProductList);

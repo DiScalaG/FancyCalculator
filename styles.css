@@ -64,17 +64,6 @@ pre {
   font-family: monospace;
 }
 
-.step {
-  margin: 10px;
-  background-color: #fff9e6;
-  border: 2px solid #774f38;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 3px 3px 4px #888888;
-  width: 200px;
-  flex: 1 1 auto;
-}
-
 .step-title {
   font-weight: bold;
   margin-bottom: 10px;
@@ -168,12 +157,12 @@ pre {
 }
 
 .requested-item {
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5px 0;
-  border-bottom: 1px dashed #ccc;
+  display: flex; /* Usa flexbox para alinear el nombre y los botones */
+  justify-content: space-between; /* Espacia el nombre y los botones a los extremos */
+  align-items: center; /* Alinea verticalmente el nombre y los botones */
+  margin-bottom: 5px;
+  padding: 5px;
+  border-bottom: 1px solid #eee;
 }
 
 .requested-item:last-child {
@@ -186,7 +175,24 @@ pre {
   font-size: 0.9em;
 }
 
-/* Navigation Bar Styles  */
+.quantity-buttons {
+  display: flex; /* Usa flexbox para los botones +/- */
+  gap: 5px; /* Espacio entre los botones */
+}
+
+.quantity-buttons button {
+  padding: 5px 10px;
+  font-size: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quantity-buttons button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Navigation Bar Styles  */
 .top-nav {
   background-color: #f0d4a9;
   border-bottom: 3px solid #774f38;
@@ -238,11 +244,11 @@ pre {
 }
 
 #output {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
+  display: flex; /* Flexbox para disposición horizontal */
+  flex-direction: row; /* Elementos en fila (horizontal) */
+  flex-wrap: wrap; /* Permite pasar a la siguiente línea */
+  justify-content: flex-start; /* Alinea los pasos a la izquierda */
+  align-items: flex-start; /* Alinea los pasos arriba */
   padding: 20px;
   background-color: #fff9e6;
   border: 2px solid #774f38;
@@ -251,8 +257,91 @@ pre {
   box-shadow: 2px 2px 3px #888888;
   white-space: pre-wrap;
   margin-bottom: 20px;
-  width: 100vw;
+  width: 100%; /*  DEJA width: 100%; POR AHORA */
   box-sizing: border-box;
-  margin-left: calc(-20px);
-  margin-right: calc(-20px);
+  margin-top: 20px;
+  position: relative;
+  overflow: visible;
+}
+
+.step {
+  /*  <--  CSS BÁSICO PARA .step (¡SOLO ESTILO!) */
+  margin: 10px;
+  background-color: #fff9e6;
+  border: 2px solid #774f38;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 3px 3px 4px #888888;
+  width: 200px; /*  <--  VUELVE A PONER width: 200px; (ancho base) */
+  display: block; /*  <--  Asegúrate de que sea display: block; o inline-block; (o quita la línea) */
+  flex: 1 1 auto;
+}
+
+#steps-container {
+  /*  <--  CSS PARA #steps-container (¡¡¡CON ID!!!) */
+  display: flex; /*  Activa flexbox en #steps-container */
+  flex-direction: row; /*  Disposición horizontal de los pasos */
+  flex-wrap: wrap; /*  Permite que los pasos pasen a la siguiente línea */
+  justify-content: flex-start; /* Alinea los pasos a la izquierda */
+  align-items: flex-start; /* Alinea los pasos arriba */
+  width: 100%; /*  Ocupa el 100% del ancho disponible en #output */
+  box-sizing: border-box; /* Asegura que padding y border no afecten el ancho */
+}
+
+.ingredients-list {
+  list-style: none; /* Elimina los puntos de lista */
+  padding-left: 0; /* Elimina el padding por defecto de la lista */
+}
+
+.ingredient-item {
+  display: flex; /* Usa flexbox para alinear nombre e input */
+  justify-content: space-between; /* Separa nombre e input */
+  align-items: center; /* Alinea verticalmente */
+  margin-bottom: 3px; /* Espacio entre ingredientes */
+}
+
+.ingredient-name {
+  margin-right: 10px; /* Espacio entre nombre e input */
+}
+
+.quantity-input {
+  width: 50px; /* Ancho fijo para los inputs */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center; /* Centra el texto en el input */
+}
+
+.ingredient-item.completed {
+  text-decoration: line-through; /* Tacha el ingrediente completado */
+  color: #888; /* Color más claro para completados */
+}
+
+.ingredient-item.hidden {
+  display: none !important; /* Oculta completamente el ingrediente */
+}
+
+#toggleCompletedSteps-container {
+  position: absolute; /* Posicionamiento absoluto dentro de #output */
+  top: 10px; /* Distancia desde la parte superior */
+  right: 10px; /* Distancia desde la derecha */
+  z-index: 100; /* Ensure button is on top of content if needed */
+  pointer-events: none; /* Make container transparent to mouse events */
+}
+
+#toggleCompletedSteps {
+  margin-bottom: 0; /* Elimina el margen inferior (ahora innecesario) */
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #eee;
+  font-size: 0.9em; /* Reduce un poco el tamaño de la fuente del botón */
+  position: relative; /* Button itself needs relative positioning for z-index to work */
+  pointer-events: auto; /* Restore mouse events for the button itself */
+  z-index: 101; /* Ensure button is on top of container */
+}
+
+#toggleCompletedSteps:hover {
+  background-color: #ddd;
 }
