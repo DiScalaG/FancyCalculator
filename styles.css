@@ -1,347 +1,339 @@
 body {
-  font-family: "Arial", sans-serif;
-  background-color: #c2e0b4;
-  margin: 0;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    font-family: "Arial", sans-serif;
+    background-color: #c2e0b4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
-  color: #d47a00;
-  font-family: "Luckiest Guy", cursive;
-  text-shadow: 2px 2px 3px #333333;
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  text-align: center;
+    color: #d47a00;
+    font-family: "Luckiest Guy", cursive;
+    text-shadow: 2px 2px 3px #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 h2 {
-  color: #774f38;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  text-align: center;
+    color: #774f38;
+    margin: 20px 0 10px;
+    text-align: center;
 }
 
-button {
-  background-color: #f9ca24;
-  color: #774f38;
-  border: 2px solid #774f38;
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 2px 2px 2px #888888;
-  transition: background-color 0.3s ease;
+button,
+.nav-link {
+    background-color: #f9ca24;
+    color: #774f38;
+    border: 2px solid #774f38;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #888;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #ffdd5e;
+button:hover,
+.nav-link:hover {
+    background-color: #ffdd5e;
+}
+
+input[type="text"],
+textarea,
+pre { /* Grupo simplificado: solo input, textarea y pre */
+    background-color: #fff9e6;
+    border: 2px solid #774f38;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px #888;
 }
 
 input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 2px solid #774f38;
-  border-radius: 8px;
-  margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 8px; /* Override para input text */
+    margin-bottom: 10px;
 }
 
 textarea,
 pre {
-  background-color: #fff9e6;
-  padding: 15px;
-  border: 2px solid #774f38;
-  border-radius: 10px;
-  overflow-x: auto;
-  box-shadow: 2px 2px 3px #888888;
-  white-space: pre-wrap;
+    padding: 15px;
+    overflow-x: auto;
+    white-space: pre-wrap;
 }
 
 pre {
-  font-family: monospace;
+    font-family: monospace;
 }
 
 .step-title {
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #774f38;
-  font-size: 1.2em;
-  text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #774f38;
+    font-size: 1.2em;
+    text-align: center;
 }
 
 .product-selection-container {
-  width: 100vw;
-  box-sizing: border-box;
-  padding: 20px;
-  margin-bottom: 20px;
-  border: 3px solid #774f38;
-  border-radius: 20px;
-  background-color: #fff9e6;
-  box-shadow: 4px 4px 5px #888888;
-  margin-left: calc(-20px);
-  margin-right: calc(-20px);
-  text-align: center;
+    width: 100vw; /* **REVERTIDO al valor original** */
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 3px solid #774f38;
+    border-radius: 20px;
+    background-color: #fff9e6;
+    box-shadow: 4px 4px 5px #888;
+    margin-left: calc(-20px); /* **REVERTIDO al valor original** */
+    margin-right: calc(-20px); /* **REVERTIDO al valor original** */
+    text-align: center;
 }
 
 .requested-products-container {
-  width: 450px;
-  padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 3px solid #774f38;
-  border-radius: 20px;
-  background-color: #f0d4a9;
-  box-shadow: 4px 4px 5px #888888;
-  text-align: center;
+    width: 450px;
+    padding: 20px;
+    margin: 20px 0;
+    border: 3px solid #774f38;
+    border-radius: 20px;
+    background-color: #f0d4a9;
+    box-shadow: 4px 4px 5px #888;
+    text-align: center;
 }
 
 .dropdown {
-  position: relative;
-  margin-bottom: 15px;
-  width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+    width: 100%;
 }
 
 #productSearch {
-  width: calc(100% - 24px);
-  padding: 12px;
-  border-width: 3px;
-  font-size: 1em;
+    width: calc(100% - 24px);
+    padding: 12px;
+    border-width: 3px;
+    font-size: 1em;
 }
 
 .dropdown-list {
-  position: absolute;
-  top: calc(100% + 5px);
-  left: 0;
-  width: 100%;
-  border: 3px solid #774f38;
-  background-color: white;
-  z-index: 10;
-  max-height: 250px;
-  overflow-y: auto;
-  display: none;
-  border-radius: 0 0 10px 10px;
-  box-shadow: 3px 3px 4px #888888;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 100%;
+    border: 3px solid #774f38;
+    background-color: white; /* Mantenido fuera del grupo */
+    z-index: 10;
+    max-height: 250px;
+    overflow-y: auto;
+    display: none;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 3px 3px 4px #888;
 }
 
 .dropdown-list.show {
-  display: block;
+    display: block;
 }
 
 .dropdown-item {
-  padding: 12px;
-  cursor: pointer;
-  font-size: 1em;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 1em;
 }
 
 .dropdown-item:hover {
-  background-color: #f0f0f0;
+    background-color: #f0f0f0;
 }
 
 #requestedProductsList {
-  border: 3px solid #774f38;
-  padding: 15px;
-  height: 300px;
-  overflow-y: auto;
-  border-radius: 15px;
-  background-color: #fff9e6;
-  box-shadow: 3px 3px 4px #888888;
-  text-align: left;
+    border: 3px solid #774f38;
+    padding: 15px;
+    height: 300px;
+    overflow-y: auto;
+    border-radius: 15px;
+    background-color: #fff9e6; /* Mantenido fuera del grupo */
+    box-shadow: 3px 3px 4px #888;
+    text-align: left;
 }
 
 #requestedProductsList p {
-  text-align: center;
-  color: #774f38;
+    text-align: center;
+    color: #774f38;
 }
 
 .requested-item {
-  display: flex; /* Usa flexbox para alinear el nombre y los botones */
-  justify-content: space-between; /* Espacia el nombre y los botones a los extremos */
-  align-items: center; /* Alinea verticalmente el nombre y los botones */
-  margin-bottom: 5px;
-  padding: 5px;
-  border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
 }
 
 .requested-item:last-child {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 .requested-item button {
-  margin-left: 10px;
-  padding: 8px 15px;
-  font-size: 0.9em;
+    margin-left: 10px;
+    padding: 8px 15px;
+    font-size: 0.9em;
 }
 
 .quantity-buttons {
-  display: flex; /* Usa flexbox para los botones +/- */
-  gap: 5px; /* Espacio entre los botones */
+    display: flex;
+    gap: 5px;
 }
 
 .quantity-buttons button {
-  padding: 5px 10px;
-  font-size: 0.8em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  cursor: pointer;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .quantity-buttons button:hover {
-  background-color: #f0f0f0;
+    background-color: #f0f0f0;
 }
 
-/* Navigation Bar Styles  */
+/* Navigation Bar Styles  - Simplificado */
 .top-nav {
-  background-color: #f0d4a9;
-  border-bottom: 3px solid #774f38;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100vw;
-  box-sizing: border-box;
-  box-shadow: 3px 3px 4px #888888;
-  border-radius: 0 0 0 0;
-  margin-bottom: 20px;
-  margin-left: calc(-20px);
-  margin-right: calc(-20px);
-  margin-top: calc(-20px);
+    background-color: #f0d4a9;
+    border-bottom: 3px solid #774f38;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw; /* **REVERTIDO al valor original** */
+    box-sizing: border-box;
+    box-shadow: 3px 3px 4px #888;
+    border-radius: 0 0 0 0;
+    margin-bottom: 20px; /* **REVERTIDO al valor original** */
+    margin-left: calc(-20px); /* **REVERTIDO al valor original** */
+    margin-right: calc(-20px); /* **REVERTIDO al valor original** */
+    margin-top: calc(-20px); /* **REVERTIDO al valor original** */
 }
 
-/*.nav-left {
-}*/
 
 .nav-right {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .nav-title {
-  color: #d47a00;
-  font-family: "Luckiest Guy", cursive;
-  font-size: 1.8em;
-  text-decoration: none;
-  text-shadow: 1px 1px 2px #333333;
+    color: #d47a00;
+    font-family: "Luckiest Guy", cursive;
+    font-size: 1.8em;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px #333;
 }
 
 .nav-link {
-  color: #774f38;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: bold;
-  padding: 8px 12px;
-  border-radius: 8px;
-  background-color: #f9ca24;
-  border: 2px solid #774f38;
-  box-shadow: 2px 2px 2px #888888;
-  transition: background-color 0.3s ease;
-}
-
-.nav-link:hover {
-  background-color: #ffdd5e;
+    margin-left: 20px;
+    padding: 8px 12px;
+    border-width: 2px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px #888;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 #output {
-  display: flex; /* Flexbox para disposición horizontal */
-  flex-direction: row; /* Elementos en fila (horizontal) */
-  flex-wrap: wrap; /* Permite pasar a la siguiente línea */
-  justify-content: flex-start; /* Alinea los pasos a la izquierda */
-  align-items: flex-start; /* Alinea los pasos arriba */
-  padding: 20px;
-  background-color: #fff9e6;
-  border: 2px solid #774f38;
-  border-radius: 10px;
-  overflow-x: auto;
-  box-shadow: 2px 2px 3px #888888;
-  white-space: pre-wrap;
-  margin-bottom: 20px;
-  width: 100%; /*  DEJA width: 100%; POR AHORA */
-  box-sizing: border-box;
-  margin-top: 20px;
-  position: relative;
-  overflow: visible;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #fff9e6; /* Mantenido fuera del grupo */
+    border: 2px solid #774f38; /* Mantenido fuera del grupo */
+    border-radius: 10px; /* Mantenido fuera del grupo */
+    overflow-x: auto;
+    white-space: pre-wrap;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+    position: relative;
+    overflow: visible;
 }
 
 .step {
-  /*  <--  CSS BÁSICO PARA .step (¡SOLO ESTILO!) */
-  margin: 10px;
-  background-color: #fff9e6;
-  border: 2px solid #774f38;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 3px 3px 4px #888888;
-  width: 200px; /*  <--  VUELVE A PONER width: 200px; (ancho base) */
-  display: block; /*  <--  Asegúrate de que sea display: block; o inline-block; (o quita la línea) */
-  flex: 1 1 auto;
+    margin: 10px;
+    background-color: #fff9e6; /* Mantenido fuera del grupo */
+    border: 2px solid #774f38; /* Mantenido fuera del grupo */
+    border-radius: 15px; /* Override para .step */
+    padding: 20px;
+    box-shadow: 3px 3px 4px #888;
+    width: 200px;
+    display: block;
+    flex: 1 1 auto;
 }
 
 #steps-container {
-  /*  <--  CSS PARA #steps-container (¡¡¡CON ID!!!) */
-  display: flex; /*  Activa flexbox en #steps-container */
-  flex-direction: row; /*  Disposición horizontal de los pasos */
-  flex-wrap: wrap; /*  Permite que los pasos pasen a la siguiente línea */
-  justify-content: flex-start; /* Alinea los pasos a la izquierda */
-  align-items: flex-start; /* Alinea los pasos arriba */
-  width: 100%; /*  Ocupa el 100% del ancho disponible en #output */
-  box-sizing: border-box; /* Asegura que padding y border no afecten el ancho */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .ingredients-list {
-  list-style: none; /* Elimina los puntos de lista */
-  padding-left: 0; /* Elimina el padding por defecto de la lista */
+    list-style: none;
+    padding-left: 0;
 }
 
 .ingredient-item {
-  display: flex; /* Usa flexbox para alinear nombre e input */
-  justify-content: space-between; /* Separa nombre e input */
-  align-items: center; /* Alinea verticalmente */
-  margin-bottom: 3px; /* Espacio entre ingredientes */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
 }
 
 .ingredient-name {
-  margin-right: 10px; /* Espacio entre nombre e input */
+    margin-right: 10px;
 }
 
 .quantity-input {
-  width: 50px; /* Ancho fijo para los inputs */
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  text-align: center; /* Centra el texto en el input */
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .ingredient-item.completed {
-  text-decoration: line-through; /* Tacha el ingrediente completado */
-  color: #888; /* Color más claro para completados */
+    text-decoration: line-through;
+    color: #888;
 }
 
 .ingredient-item.hidden {
-  display: none !important; /* Oculta completamente el ingrediente */
+    display: none !important;
 }
 
 #toggleCompletedSteps-container {
-  position: absolute; /* Posicionamiento absoluto dentro de #output */
-  top: 10px; /* Distancia desde la parte superior */
-  right: 10px; /* Distancia desde la derecha */
-  z-index: 100; /* Ensure button is on top of content if needed */
-  pointer-events: none; /* Make container transparent to mouse events */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+    pointer-events: none;
 }
 
 #toggleCompletedSteps {
-  margin-bottom: 0; /* Elimina el margen inferior (ahora innecesario) */
-  padding: 8px 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #eee;
-  font-size: 0.9em; /* Reduce un poco el tamaño de la fuente del botón */
-  position: relative; /* Button itself needs relative positioning for z-index to work */
-  pointer-events: auto; /* Restore mouse events for the button itself */
-  z-index: 101; /* Ensure button is on top of container */
+    margin-bottom: 0;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #eee;
+    font-size: 0.9em;
+    position: relative;
+    pointer-events: auto;
+    z-index: 101;
 }
 
 #toggleCompletedSteps:hover {
-  background-color: #ddd;
+    background-color: #ddd;
 }
